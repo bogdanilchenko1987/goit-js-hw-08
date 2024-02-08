@@ -10,7 +10,7 @@ const onPlay = function ({ seconds }) {
   localStorage.setItem(common.CURRENT_TIME, seconds);
 };
 
-player.on('timeupdate', throttle(onPlay, 100));
+player.on('timeupdate', throttle(onPlay, 1000));
 player
   .setCurrentTime(localStorage.getItem(common.CURRENT_TIME))
   .catch(function (error) {
